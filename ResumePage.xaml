@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.ResumePage"
+             Title="Resumo da Reserva"
+             BackgroundColor="#0F172A">
+
+    <VerticalStackLayout Padding="24" Spacing="20" VerticalOptions="Center">
+
+        <Label Text="✅ Reserva Confirmada!" 
+               FontSize="24" 
+               FontAttributes="Bold" 
+               TextColor="#38BDF8" 
+               HorizontalOptions="Center" />
+
+        <Frame CornerRadius="16" Padding="20" BackgroundColor="#1E293B" HasShadow="True" BorderColor="#334155">
+            <VerticalStackLayout Spacing="12">
+                <Label Text="{Binding QuartoSelecionado.Descricao, StringFormat='Acomodação: {0}'}" FontSize="16" FontAttributes="Bold" TextColor="White" />
+                <Label Text="{Binding QntAdultos, StringFormat='Adultos: {0}'}" TextColor="#CBD5E1" />
+                <Label Text="{Binding QntCriancas, StringFormat='Crianças: {0}'}" TextColor="#CBD5E1" />
+                <Label Text="{Binding Estadia, StringFormat='Total de Diárias: {0}'}" TextColor="#CBD5E1" />
+                <Label Text="{Binding DataCheckIn, StringFormat='Check-in: {0:dd/MM/yyyy}'}" TextColor="#CBD5E1" />
+                <Label Text="{Binding DataCheckOut, StringFormat='Check-out: {0:dd/MM/yyyy}'}" TextColor="#CBD5E1" />
+
+                <BoxView HeightRequest="1" Color="#334155" Margin="0,5" />
+
+                <Label Text="{Binding ValorTotal, StringFormat='Valor Total: {0:C}'}" 
+                       FontSize="20" 
+                       FontAttributes="Bold" 
+                       TextColor="#38BDF8" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" 
+                BackgroundColor="#475569" 
+                TextColor="White" 
+                CornerRadius="12" 
+                HeightRequest="50"
+                Clicked="Button_Clicked_Voltar" />
+
+    </VerticalStackLayout>
+</ContentPage>

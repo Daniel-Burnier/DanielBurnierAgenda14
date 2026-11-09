@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.SobrePage"
+             Title="Sobre o Desenvolvedor"
+             BackgroundColor="#F4F6F9">
+
+    <VerticalStackLayout Padding="30" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+
+        <Label Text="App Hotel" 
+               FontSize="26" 
+               FontAttributes="Bold" 
+               TextColor="#1A2B4C" 
+               HorizontalOptions="Center" />
+
+        <Frame CornerRadius="10" Padding="20" HasShadow="True" WidthRequest="300">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Desenvolvedor:" FontAttributes="Bold" TextColor="#555" />
+                <Label Text="Daniel Açafrão Burnier Ganimi" FontSize="16" TextColor="#1A2B4C" />
+
+                <BoxView HeightRequest="1" Color="#DDD" Margin="0,5" />
+
+                <Label Text="Curso / Instituição:" FontAttributes="Bold" TextColor="#555" />
+                <Label Text="Técnico em Desenvolvimento de Sistemas - ETEC" FontSize="14" />
+
+                <BoxView HeightRequest="1" Color="#DDD" Margin="0,5" />
+
+                <Label Text="Ano de Desenvolvimento:" FontAttributes="Bold" TextColor="#555" />
+                <Label Text="2026" FontSize="14" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" 
+                BackgroundColor="#34495E" 
+                TextColor="White" 
+                CornerRadius="8" 
+                Clicked="Button_Clicked_Voltar" 
+                HorizontalOptions="Fill" />
+
+    </VerticalStackLayout>
+</ContentPage>
